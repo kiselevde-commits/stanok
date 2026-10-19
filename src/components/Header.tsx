@@ -72,7 +72,7 @@ export default function Header() {
 
         {/* Навигация — десктоп (пилюля по центру) */}
         <nav
-          className="ml-6 hidden items-center gap-1 rounded-full border border-white/10 bg-white/5 p-1 backdrop-blur-sm lg:flex"
+          className="ml-10 hidden items-center gap-1 rounded-full border border-white/10 bg-white/5 p-1 backdrop-blur-sm lg:flex"
           aria-label="Основная навигация"
         >
           {nav.map((item) => {
