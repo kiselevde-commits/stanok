@@ -3,7 +3,7 @@ import LeadForm from './ui/LeadForm'
 import { useLeadFlow } from './ui/LeadFlowProvider'
 import { company, nav } from '../data/site'
 import { IconPhone, IconTelegram, IconWhatsApp } from './ui/Icons'
-import logoUrl from '/logo.svg?url'
+import logoUrl from '../assets/logo.svg'
 
 export default function Footer() {
   const { showSuccess } = useLeadFlow()

@@ -4,7 +4,7 @@ import Button from './ui/Button'
 import { company, nav } from '../data/site'
 import { useLeadFlow } from './ui/LeadFlowProvider'
 import { IconMenu, IconPhone, IconClose, IconArrowRight } from './ui/Icons'
-import logoUrl from '/logo.svg?url'
+import logoUrl from '../assets/logo.svg'
 
 export default function Header() {
   const { openModal } = useLeadFlow()
