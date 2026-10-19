@@ -31,7 +31,7 @@ export default function Header() {
         ([entry]) => {
           if (entry.isIntersecting) setActiveId(id)
         },
-        { rootMargin: '-40% 0px -55% 0px', threshold: 0 },
+        { rootMargin: '-50% 0px -50% 0px', threshold: 0 },
       )
       obs.observe(el)
       observers.push(obs)
@@ -59,20 +59,24 @@ export default function Header() {
         }`}
       >
         {/* Логотип */}
-        <a href="#hero" className="flex items-center gap-3" aria-label="SingaTech Mash — на главную">
+        <a
+          href="#hero"
+          className="flex shrink-0 items-center gap-3 relative z-60"
+          aria-label="SingaTech Mash — на главную"
+        >
           <img
             src={logoUrl}
             alt="SingaTech Mash"
             draggable={false}
-            className={`w-auto select-none transition-[height] duration-300 ${
-              scrolled ? 'h-12' : 'h-11 lg:h-14'
+            className={`w-auto select-none drop-shadow-[0_2px_6px_rgba(0,0,0,0.45)] transition-[height] duration-300 ${
+              scrolled ? 'h-10 lg:h-12' : 'h-12 lg:h-14'
             }`}
           />
         </a>
 
         {/* Навигация — десктоп (пилюля по центру) */}
         <nav
-          className="ml-10 hidden items-center gap-1 rounded-full border border-white/10 bg-white/5 p-1 backdrop-blur-sm lg:flex"
+          className="hidden shrink-0 items-center justify-center gap-1 rounded-full border border-white/10 bg-white/5 p-1 backdrop-blur-sm xl:flex xl:min-w-0 relative"
           aria-label="Основная навигация"
         >
           {nav.map((item) => {
@@ -83,7 +87,7 @@ export default function Header() {
                 href={`#${item.id}`}
                 onClick={() => setActiveId(item.id)}
                 aria-current={isActive ? 'page' : undefined}
-                className={`relative rounded-full px-3.5 py-2 text-[13px] font-medium transition-all duration-200 xl:px-4 xl:text-sm ${
+                className={`relative whitespace-nowrap rounded-full px-2.5 py-1 text-[11px] font-medium transition-all duration-200 ${
                   isActive
                     ? 'bg-accent-500 text-white shadow-lg shadow-accent-500/25'
                     : 'text-light-200/80 hover:bg-white/10 hover:text-light-50'
@@ -96,25 +100,25 @@ export default function Header() {
         </nav>
 
         {/* Правая часть */}
-        <div className="flex items-center gap-3">
+        <div className="flex shrink-0 items-center gap-3">
           <a
             href={company.phoneHref}
-            className="hidden items-center gap-2 text-[15px] font-bold text-light-50 tabular-nums transition-colors hover:text-accent-400 lg:flex"
+            className="hidden shrink-0 items-center gap-2 whitespace-nowrap text-[13px] font-bold text-light-50 tabular-nums transition-colors hover:text-accent-400 xl:flex"
           >
             <IconPhone className="h-4 w-4 text-accent-500" />
             {company.phone}
           </a>
-          <div className="hidden h-8 w-px bg-white/10 lg:block" aria-hidden="true" />
+          <div className="hidden h-8 w-px bg-white/10 xl:block" aria-hidden="true" />
           <Button
             variant="primary"
-            className="hidden whitespace-nowrap sm:inline-flex"
+            className="hidden shrink-0 whitespace-nowrap sm:inline-flex"
             onClick={() => openModal({ title: 'Заказать звонок', mode: 'call' })}
           >
             Заказать звонок
           </Button>
           <button
             type="button"
-            className="rounded-lg p-2 text-light-100 transition-colors hover:bg-white/10 hover:text-accent-400 lg:hidden"
+            className="shrink-0 rounded-lg p-2 text-light-100 transition-colors hover:bg-white/10 hover:text-accent-400 xl:hidden"
             aria-label={menuOpen ? 'Закрыть меню' : 'Открыть меню'}
             aria-expanded={menuOpen}
             aria-controls="mobile-nav"
@@ -129,7 +133,7 @@ export default function Header() {
       {menuOpen && (
         <div
           id="mobile-nav"
-          className="fixed inset-x-0 bottom-0 top-20 z-40 overflow-y-auto bg-graphite-950/95 backdrop-blur-xl animate-fade-in lg:hidden"
+          className="fixed inset-x-0 bottom-0 top-full z-40 overflow-y-auto bg-graphite-950/95 backdrop-blur-xl animate-fade-in xl:hidden"
         >
           <Container className="py-6">
             <nav className="stagger flex flex-col divide-y divide-white/5" aria-label="Мобильная навигация">
