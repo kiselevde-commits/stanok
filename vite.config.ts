@@ -3,9 +3,9 @@ import react from '@vitejs/plugin-react'
 import tailwindcss from '@tailwindcss/vite'
 
 export default defineConfig({
-  // Base path: '/' для локальной разработки, '/stanok/' для GitHub Pages
+  // Base path для GitHub Pages (repo name "stanok")
   // Измените '/stanok/' на имя вашего репозитория, если другое
-  base: import.meta.env.MODE === 'production' ? '/stanok/' : '/',
+  base: '/stanok/',
   plugins: [react(), tailwindcss()],
   server: {
     port: 5173,
