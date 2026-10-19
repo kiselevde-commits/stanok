@@ -14,6 +14,7 @@ export const company = {
 
 export const nav = [
   { id: 'catalog', label: 'Каталог' },
+  { id: 'quiz', label: 'Подбор станка' },
   { id: 'advantages', label: 'Преимущества' },
   { id: 'leasing', label: 'Лизинг и доставка' },
   { id: 'reviews', label: 'Отзывы' },
