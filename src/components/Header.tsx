@@ -4,6 +4,7 @@ import Button from './ui/Button'
 import { company, nav } from '../data/site'
 import { useLeadFlow } from './ui/LeadFlowProvider'
 import { IconMenu, IconPhone, IconClose, IconArrowRight } from './ui/Icons'
+import logoUrl from '/logo.svg?url'
 
 export default function Header() {
   const { openModal } = useLeadFlow()
@@ -60,7 +61,7 @@ export default function Header() {
         {/* Логотип */}
         <a href="#hero" className="flex items-center gap-3" aria-label="SingaTech Mash — на главную">
           <img
-            src="/logo.svg"
+            src={logoUrl}
             alt="SingaTech Mash"
             draggable={false}
             className={`w-auto select-none transition-[height] duration-300 ${

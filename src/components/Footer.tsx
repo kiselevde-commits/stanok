@@ -3,6 +3,7 @@ import LeadForm from './ui/LeadForm'
 import { useLeadFlow } from './ui/LeadFlowProvider'
 import { company, nav } from '../data/site'
 import { IconPhone, IconTelegram, IconWhatsApp } from './ui/Icons'
+import logoUrl from '/logo.svg?url'
 
 export default function Footer() {
   const { showSuccess } = useLeadFlow()
@@ -14,7 +15,7 @@ export default function Footer() {
         <div className="grid gap-12 lg:grid-cols-2">
           {/* Контакты */}
           <div>
-            <img src="/logo.svg" alt="SingaTech Mash" className="h-11 w-auto" />
+            <img src={logoUrl} alt="SingaTech Mash" className="h-11 w-auto" />
 
             <h2 className="mt-6 font-display text-2xl font-bold text-light-50">
               Остались вопросы? Свяжитесь с главным инженером проекта
