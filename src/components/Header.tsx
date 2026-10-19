@@ -60,7 +60,7 @@ export default function Header() {
         {/* Логотип */}
         <a href="#hero" className="flex items-center gap-3" aria-label="SingaTech Mash — на главную">
           <img
-            src="/logo.svg"
+            src="/stanok/logo.svg"
             alt="SingaTech Mash"
             draggable={false}
             className={`w-auto select-none transition-[height] duration-300 ${

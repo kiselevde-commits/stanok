@@ -3,7 +3,7 @@ import react from '@vitejs/plugin-react'
 import tailwindcss from '@tailwindcss/vite'
 
 export default defineConfig({
-  // Для корректной работы на GitHub Pages в поддиректории /stanok/
+  // Base path for GitHub Pages deployment (repo name "stanok")
   base: '/stanok/',
   plugins: [react(), tailwindcss()],
   server: {
