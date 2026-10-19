@@ -133,7 +133,7 @@ export default function Header() {
       {menuOpen && (
         <div
           id="mobile-nav"
-          className="fixed inset-x-0 bottom-0 top-full z-40 overflow-y-auto bg-graphite-950/95 backdrop-blur-xl animate-fade-in xl:hidden"
+          className="fixed inset-0 z-70 overflow-y-auto bg-graphite-950/95 backdrop-blur-xl animate-fade-in xl:hidden"
         >
           <Container className="py-6">
             <nav className="stagger flex flex-col divide-y divide-white/5" aria-label="Мобильная навигация">
